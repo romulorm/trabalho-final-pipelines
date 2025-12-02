@@ -23,29 +23,29 @@ def carregar_dados(caminho_arquivo):
     print("=" * 50)
 
     try:
-        # 1. Tenta carregar o arquivo CSV
+        # Tenta carregar o arquivo CSV
         df = pd.read_csv(caminho_arquivo)
         print(f"✅ Dados carregados do arquivo: {caminho_arquivo}")
         return df
     
     except FileNotFoundError:
-        # 2. Verifica se o arquivo não foi encontrado
+        # Verifica se o arquivo não foi encontrado
         print(f"❌ Erro: Arquivo não encontrado: {caminho_arquivo}")
         print("Verifique o caminho e o nome do arquivo.")
         return None
         
     except pd.errors.EmptyDataError:
-        # 3. Verifica se o arquivo está vazio
+        # Verifica se o arquivo está vazio
         print(f"❌ Erro: O arquivo {caminho_arquivo} está vazio.")
         return None
         
     except pd.errors.ParserEror:
-        # 4. Verifica se há erro de parsing (formato incorreto)
+        # Verifica se há erro de parsing (formato incorreto)
         print(f"❌ Erro: Falha no parse do arquivo {caminho_arquivo}. O arquivo pode estar corrompido ou com diferente delimitador.")
         return None
         
     except Exception as e:
-        # 5. Verifica qualquer outro erro inesperado
+        # Verifica qualquer outro erro inesperado
         print(f"❌ Um erro inesperado ocorreu: {e}")
         return None
 
