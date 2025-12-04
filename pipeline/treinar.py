@@ -23,13 +23,24 @@ def preparar_dados(df, coluna_target='respondeu_campanha'):
     # TODO 1: Crie X removendo a coluna target e cliente_id do DataFrame
     # Dica: X = df.drop(columns=[coluna_target, 'cliente_id'])
     
-    X = None  # Substitua None pelo código correto
+    X = df.drop(columns=[coluna_target, 'cliente_id'])  # Remove a coluna target e cliente_id
     
     
     # TODO 2: Crie y extraindo apenas a coluna target
     # Dica: y = df[coluna_target]
     
-    y = None  # Substitua None pelo código correto
+    y = df[coluna_target]
+
+    print("\n")
+    print("=" * 50)
+    print("              PREPARANDO DADOS")
+    print("=" * 50)
+    print("\n                              VETOR X")
+    print("\n", X.head())
+    print("...")
+    print("\n VETOR y")
+    print("\n", y.head())
+    print("...")
     
     
     return X, y
@@ -54,7 +65,7 @@ def dividir_treino_teste(X, y, tamanho_teste=0.2, random_state=42):
     #           X, y, test_size=tamanho_teste, random_state=random_state
     #       )
     
-    X_train, X_test, y_train, y_test = None, None, None, None  # Substitua pelo código
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=tamanho_teste, random_state=random_state)
     
     
     # Mostrar tamanhos
@@ -83,7 +94,7 @@ def treinar_modelo(X_train, y_train):
     # Passo 1: Criar o modelo
     # Dica: modelo = RandomForestClassifier(n_estimators=100, random_state=42)
     
-    modelo = None  # Substitua None pelo código correto
+    modelo = RandomForestClassifier(n_estimators=100, random_state=42)
     
     
     # Passo 2: Treinar o modelo (se foi criado)
@@ -91,14 +102,14 @@ def treinar_modelo(X_train, y_train):
     
     if modelo is not None:
         # TODO 5: Treine o modelo usando .fit()
-        pass  # Substitua pass pelo código correto
+        modelo.fit(X_train, y_train)
     
     
     print("✅ Modelo treinado!")
     return modelo
 
 
-def salvar_modelo(modelo, caminho='models/modelo_campanha.pkl'):
+def salvar_modelo(modelo, caminho='../models/modelo_campanha.pkl'):
     """
     Salva o modelo treinado em disco.
     
@@ -113,24 +124,24 @@ def salvar_modelo(modelo, caminho='models/modelo_campanha.pkl'):
 # Teste local
 if __name__ == "__main__":
     # Carregar dados
-    df = pd.read_csv("data/clientes_campanha.csv")
+    df = pd.read_csv("../data/clientes_campanha.csv")
     
     # Preparar
     X, y = preparar_dados(df)
     
     if X is None or y is None:
-        print("ERRO: Complete os TODOs 1 e 2!")
+        print("ERRO: Não foi possível obter X e y.")
     else:
         # Dividir
         X_train, X_test, y_train, y_test = dividir_treino_teste(X, y)
         
         if X_train is None:
-            print("ERRO: Complete o TODO 3!")
+            print("ERRO: Não foi possível dividir X em treino e teste.")
         else:
             # Treinar
             modelo = treinar_modelo(X_train, y_train)
             
             if modelo is None:
-                print("ERRO: Complete os TODOs 4 e 5!")
+                print("ERRO: Modelo vazio, favor verificar!")
             else:
                 salvar_modelo(modelo)

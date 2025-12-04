@@ -86,7 +86,7 @@ def explorar_dados(df):
 
     print("")
     print("\n4. PRIMEIRAS 5 LINHAS DO DATAFRAME")
-    print("-" * 30)
+    print("-" * 122)
     print(df.head())
 
 
