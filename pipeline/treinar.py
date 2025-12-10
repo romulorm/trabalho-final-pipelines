@@ -109,7 +109,7 @@ def treinar_modelo(X_train, y_train):
     return modelo
 
 
-def salvar_modelo(modelo, caminho='../models/modelo_campanha.pkl'):
+def salvar_modelo(modelo, caminho='models/modelo_campanha.pkl'):
     """
     Salva o modelo treinado em disco.
     
