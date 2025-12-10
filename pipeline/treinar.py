@@ -124,7 +124,7 @@ def salvar_modelo(modelo, caminho='../models/modelo_campanha.pkl'):
 # Teste local
 if __name__ == "__main__":
     # Carregar dados
-    df = pd.read_csv("../data/clientes_campanha.csv")
+    df = pd.read_csv("data/clientes_campanha.csv")
     
     # Preparar
     X, y = preparar_dados(df)

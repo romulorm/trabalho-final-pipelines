@@ -123,7 +123,7 @@ def verificar_target(df, coluna_target='respondeu_campanha'):
 
 # Teste local (executar este arquivo diretamente)
 if __name__ == "__main__":
-    df = carregar_dados("../data/clientes_campanha.csv")
+    df = carregar_dados("data/clientes_campanha.csv")
     if df is not None:
         explorar_dados(df)
         verificar_target(df)
