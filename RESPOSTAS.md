@@ -3,9 +3,9 @@
 ## Identificação do Grupo
 
 - **Integrantes:**
-  1. Nome: Filipe Ribeiro de Oliveira
-  2. Nome: Luis Eduardo Paes Salomão
-  3. Nome: Rômulo Ribeiro Moreira
+  - Filipe Ribeiro de Oliveira
+  - Luis Eduardo Paes Salomão
+  - Rômulo Ribeiro Moreira
 
 ---
 
@@ -175,9 +175,10 @@ O F1-Score de 0.4043 está abaixo de 0.5. Isso indica que o modelo não está 
 
 O dataset é considerado balanceado pois a coluna target 'respondeu_campanha' possui uma distribuição de classes relativamente uniforme, com a proporção 56%/43%.
 
-respondeu_campanha
-0    0.5606
-1    0.4394
+| respondeu_campanha |  %     |
+| ------------------ |--------|
+| 0                  | 0.5606 |
+| 1                  | 0.4394 |
 
 <!-- Dica: veja a proporção da variável target na exploração dos dados -->
 
