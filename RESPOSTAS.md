@@ -5,8 +5,8 @@
 - **Integrantes:**
   1. Nome: Filipe Ribeiro de Oliveira
   2. Nome: Luis Eduardo Paes Salomão
-  3. Nome: ROmulo Ribeiro Moreira
-  4. Nome:
+  3. Nome: Rômulo Ribeiro Moreira
+
 
 ---
 
