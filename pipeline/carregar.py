@@ -69,8 +69,8 @@ def explorar_dados(df):
     print("\n2. DATASET SHAPE")
     print("-" * 30)
     print("Shape:")
-    print(f"Linhas: {df.shape.__getitem__(0)}")
-    print(f"Colunas: {df.shape.__getitem__(1)}")
+    print(f"    Linhas: {df.shape.__getitem__(0)}")
+    print(f"    Colunas: {df.shape.__getitem__(1)}")
     
 
     # TODO 3: Mostre os tipos de cada coluna
