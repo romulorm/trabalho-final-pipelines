@@ -39,7 +39,7 @@ def carregar_dados(caminho_arquivo):
         print(f"❌ Erro: O arquivo {caminho_arquivo} está vazio.")
         return None
         
-    except pd.errors.ParserEror:
+    except pd.errors.ParserError:
         # Verifica se há erro de parsing (formato incorreto)
         print(f"❌ Erro: Falha no parse do arquivo {caminho_arquivo}. O arquivo pode estar corrompido ou com diferente delimitador.")
         return None

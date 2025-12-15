@@ -3,8 +3,8 @@ Pipeline - Etapa 2: Validar Dados com Pandera
 """
 
 import pandas as pd
-import pandera as pa
-from pandera import Column, Check, DataFrameSchema
+import pandera.pandas as pa
+from pandera.pandas import Column, Check, DataFrameSchema
 
 
 def criar_schema():
@@ -100,7 +100,7 @@ def validar_dados(df):
         df_validado = schema.validate(df)
         print("✅ Dados válidos!")
         return df_validado
-    except pa.errors.SchemaError as e:
+    except pa.errors.SchemaErrors as e:
         print("❌ Dados inválidos!")
         print(f"Erro: {e}")
         raise
