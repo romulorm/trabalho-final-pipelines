@@ -3,11 +3,10 @@
 ## Identificação do Grupo
 
 - **Integrantes:**
-  1. Nome:
-  2. Nome:
-  3. Nome:
-  4. Nome:
-
+  1. Nome: Filipe Ribeiro de Oliveira
+  2. Nome: Luiz Eduardo Paes Salomão
+  3. Nome: Rômulo Ribeiro Moreira
+  
 ---
 
 ## Parte 1: Resultados do Pipeline
